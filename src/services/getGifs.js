@@ -11,10 +11,13 @@ export default function getGifs({ keyword = "420" } = {}) {
       .then((response) => {
         const { data } = response;
         /* Data es un array de objetos, y cada obj. es un GIF */
-        const gifs = data.map((image) => image.images.downsized_medium.url);
-        /* Mapeo el array y le saco el url a c/gif. Queda guardado en gifs */
+        const gifs = data.map((image) => {
+          const { images, title, id } = image;
+          const { url } = images.downsized_medium;
+          return { title, url, id };
+          /* Mapeo el array y le saco el url, title y id(key) a c/gif. Queda guardado en gifs */
+        });
         return gifs;
-        /* la función retorna el arreglo de URL's */
       })
   );
 }

@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import getGifs from "./services/getGifs";
+import Gif from "./components/Gif";
 
 function App() {
   const [gifs, setGifs] = useState([]);
@@ -20,7 +21,7 @@ function App() {
         <input id="searcher" />
         {/* Recorro el array gifs y muestro c/u */}
         {gifs.map((singleGif) => (
-          <img src={singleGif} alt="a gif" />
+          <Gif title={singleGif.title} url={singleGif.url} key={singleGif.id} />
         ))}
       </section>
     </div>
