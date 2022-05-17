@@ -5,9 +5,10 @@ import getGifs from "./services/getGifs";
 function App() {
   const [gifs, setGifs] = useState([]);
 
-  /* Llama a la fción. getGifs, luego seteo a gifs como un array de url's */
+  /* Llama a la fción. getGifs (retorna array de URL's) */
   useEffect(function () {
-    getGifs({ keyword: "rick" }).then((gifs) => setGifs(gifs));
+    getGifs({ keyword: "Kyrie" }).then((gifs) => setGifs(gifs));
+    /* Seteo en gifs el arreglo de urls */
   }, []);
 
   return (
@@ -17,7 +18,7 @@ function App() {
         <h2>This is a gif searcher</h2>
         <h3>Please enter the keyword:</h3>
         <input id="searcher" />
-        {/* Recorro el array gifs */}
+        {/* Recorro el array gifs y muestro c/u */}
         {gifs.map((singleGif) => (
           <img src={singleGif} alt="a gif" />
         ))}
