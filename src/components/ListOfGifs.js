@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Gif from "./Gif";
 import getGifs from "../services/getGifs";
-/* Lista de Gifs */
 
 /* Recibe como prop el keyword a buscar */
 export default function ListOfGifs({ keyword }) {
