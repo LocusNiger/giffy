@@ -15,6 +15,12 @@ export default function ListOfGifs({ keyword }) {
     /* Keyword -> dependencia de useEffect. Se vuelve a renderizar cuando cambie */
   );
 
-  return gifs.map(({ title, url }) => <Gif title={title} url={url} key={url} />);
-  /* Recorre el array de gifs y pasa las props al componente Gif */
+  return (
+    <div>
+      {gifs.map(({ title, url }) => (
+        <Gif title={title} url={url} key={url} />
+        /* Recorre el array de gifs y pasa las props al componente Gif */
+      ))}
+    </div>
+  );
 }
