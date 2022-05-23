@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import Gif from "./Gif";
 import getGifs from "../services/getGifs";
 
-/* Recibe como prop el keyword a buscar */
-export default function ListOfGifs({ keyword }) {
+/* Recibe como prop el obj params (wouter). En él de encuentra el keyword */
+export default function ListOfGifs({ params }) {
+  /* Saco el keyword que recibímos mediante la ruta */
+  const { keyword } = params;
   const [gifs, setGifs] = useState([]);
   useEffect(
     function () {

@@ -1,20 +1,16 @@
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import ListOfGifs from "./components/ListOfGifs";
+import Welcome from "./components/Welcome";
+import { Route } from "wouter";
 
 function App() {
-  const [keyword, setKeyword] = useState("420");
-  const handleKeyword = (e) => {
-    setKeyword(e.target.value);
-  };
   return (
     <div className="App">
       <section className="App-content">
-        <h1>Hello dear</h1>
-        <h2>This is a gif searcher</h2>
-        <h3>Please enter the keyword:</h3>
-        <input id="searcher" onChange={handleKeyword} />
-        <ListOfGifs keyword={keyword} />
+        <Welcome />
+        {/* route: cuando el path sea X, el componente a renderizar es Y */}
+        <Route path="/gif/:keyword" component={ListOfGifs} />
       </section>
     </div>
   );
