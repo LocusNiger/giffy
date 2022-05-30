@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Gif from "./Gif";
 import getGifs from "../services/getGifs";
 
-/* Recibe como prop el obj params (wouter). En él de encuentra el keyword */
+/* Recibe como prop el obj params (wouter). En él se encuentra el keyword */
 export default function ListOfGifs({ params }) {
   /* Saco el keyword que recibímos mediante la ruta */
   const { keyword } = params;
