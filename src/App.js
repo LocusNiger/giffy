@@ -6,8 +6,8 @@ import "tailwindcss/tailwind.css";
 
 function App() {
   return (
-    <div className="flex justify-center items-center bg-yellow-400 min-h-screen">
-      <section className="App-content">
+    <div className="min-h-screen bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
+      <section className="App-content flex flex-col items-center min-h-screen justify-center">
         <Welcome />
         {/* route: cuando el path sea X, el componente a renderizar es Y */}
         <Route path="/gif/:keyword" component={ListOfGifs} />

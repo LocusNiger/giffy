@@ -24,7 +24,7 @@ export default function Search() {
       <Link
         to={`/gif/${keyword}`}
         onClick={handleBlank}
-        className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-black rounded-r-lg hover:bg-yellow-400 hover:border hover:border-black  focus:bg-indigo-700"
+        className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-indigo-500 rounded-r-lg hover:bg-indigo-600  focus:bg-indigo-700"
       >
         Search
       </Link>
