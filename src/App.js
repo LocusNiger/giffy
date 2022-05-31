@@ -6,7 +6,7 @@ import "tailwindcss/tailwind.css";
 
 function App() {
   return (
-    <div className="flex justify-center items-center bg-blue-200">
+    <div className="flex justify-center items-center bg-yellow-400 min-h-screen">
       <section className="App-content">
         <Welcome />
         {/* route: cuando el path sea X, el componente a renderizar es Y */}

@@ -14,11 +14,20 @@ export default function Search() {
   };
 
   return (
-    <>
-      <input id="searcher" onChange={handleKeyword} />
-      <Link to={`/gif/${keyword}`} onClick={handleBlank}>
-        BUSCAR
+    <div className="relative my-2 box-border">
+      <input
+        id="searcher"
+        onChange={handleKeyword}
+        className="w-96 h-10 pl-3 pr-8  plactext-baseeholder-gray-600 border rounded-lg focus:shadow-outline"
+        placeholder="Search for GIFs"
+      />
+      <Link
+        to={`/gif/${keyword}`}
+        onClick={handleBlank}
+        className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-black rounded-r-lg hover:bg-yellow-400 hover:border hover:border-black  focus:bg-indigo-700"
+      >
+        Search
       </Link>
-    </>
+    </div>
   );
 }
