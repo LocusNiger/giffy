@@ -10,7 +10,7 @@ function App() {
       <section className="App-content flex flex-col items-center min-h-screen justify-center">
         <Welcome />
         {/* route: cuando el path sea X, el componente a renderizar es Y */}
-        <Route path="/gif/:keyword" component={ListOfGifs} />
+        <Route path="/search/:keyword" component={ListOfGifs} />
       </section>
     </div>
   );

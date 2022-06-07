@@ -27,7 +27,7 @@ export default function ListOfGifs({ params }) {
 
   /* Si está cargando la lista, muestra el Loader */
   if (loading) {
-    return <div className="loader"></div>;
+    return <div className="loader min-h-screen min-w-fit"></div>;
   } else {
     /* sino retorna la lista de gifs */
     return (

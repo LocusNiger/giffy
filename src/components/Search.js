@@ -22,7 +22,7 @@ export default function Search() {
         placeholder="Search for GIFs"
       />
       <Link
-        to={`/gif/${keyword}`}
+        to={`/search/${keyword}`}
         onClick={handleBlank}
         className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-indigo-500 rounded-r-lg hover:bg-indigo-600  focus:bg-indigo-700"
       >
