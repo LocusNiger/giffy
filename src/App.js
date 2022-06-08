@@ -10,7 +10,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
       <section className="App-content flex flex-col items-center min-h-screen">
         <Link to="/">
-          <div className="max-h-max">
+          <div className="max-h-max lg:mt-6">
             <img className="max-w-xs w-40 hover:cursor-pointer" alt="Giffy logo" src={Logo} />
           </div>
         </Link>
