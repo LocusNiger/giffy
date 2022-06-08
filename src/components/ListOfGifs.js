@@ -31,11 +31,11 @@ export default function ListOfGifs({ params }) {
   } else {
     /* sino retorna la lista de gifs */
     return (
-      <div className="flex flex-col gap-2 items-center mb-10">
-        <p className="text-xl mb-10">
-          These are the results for <span className="text-2xl font-black uppercase">'{keyword}'</span>
+      <div className="flex flex-col gap-2 items-center mb-10 my-5">
+        <p className="text-xl mb-5">
+          These are the results for <span className="text-xl font-black uppercase">'{keyword}'</span>
         </p>
-        <div className="grid grid-cols-3 grid-rows-4 gap-x-1 gap-y-10 min-w-min">
+        <div className="flex flex-col gap-8 min-w-full justify-center items-center">
           {gifs.map(({ title, url }) => (
             <Gif title={title} url={url} key={url} />
             /* Recorre el array de gifs y pasa las props al componente Gif */

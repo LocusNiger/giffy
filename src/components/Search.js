@@ -14,17 +14,17 @@ export default function Search() {
   };
 
   return (
-    <div className="relative my-2 box-border">
+    <div className="relative my-2 box-border w-full">
       <input
         id="searcher"
         onChange={handleKeyword}
-        className="w-96 h-10 pl-3 pr-8  plactext-baseeholder-gray-600 border rounded-lg focus:shadow-outline"
+        className="border w-max h-8 rounded-lg px-2 leading-tight focus:outline-none focus:border-indigo-500"
         placeholder="Search for GIFs"
       />
       <Link
         to={`/search/${keyword}`}
         onClick={handleBlank}
-        className="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-indigo-500 rounded-r-lg hover:bg-indigo-600  focus:bg-indigo-700"
+        className="absolute inset-y-0 right-0 flex items-center px-4 h-8 font-bold text-white bg-indigo-500 rounded-r-lg hover:bg-indigo-600  focus:bg-indigo-700"
       >
         Search
       </Link>
