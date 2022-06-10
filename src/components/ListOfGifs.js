@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Gif from "./Gif";
-import getGifs from "../services/getGifs";
+import { useGifs } from "../hooks/useGifs";
 
 /* Recibe como prop el obj params (wouter). En él se encuentra el keyword */
 export default function ListOfGifs({ params }) {
   /* Saco el keyword que recibímos mediante la ruta */
   const { keyword } = params;
-  const [gifs, setGifs] = useState([]);
-  /* useState para manejar el loader de la lista de gifs. Por defecto en false */
-  const [loading, setLoading] = useState(false);
-  useEffect(
-    function () {
-      /* Antes de comenzar la búsqueda de gifs, el loader pasa a true */
-      setLoading(true);
-      /* useEffect llama a la fción. getGifs y le pasa el keyword a buscar */
-      getGifs({ keyword }).then((gifs) => {
-        setGifs(gifs);
-        /* Seteo en gifs el arreglo de urls */
-        setLoading(false);
-        /* Cuando carga la lista, el loader pasa a false de nuevo */
-      });
-    },
-    [keyword]
-    /* Keyword -> dependencia de useEffect. Se vuelve a renderizar cuando cambie */
-  );
+  /* Recupero loading y gifs del custom hook */
+  const { loading, gifs } = useGifs({ keyword });
 
   /* Si está cargando la lista, muestra el Loader */
   if (loading) {
