@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getGifs from "../services/getGifs";
 
 /* Custom hook para volver a utilizar lógica */
-export default function useGifs({ keyword }) {
+export function useGifs({ keyword }) {
   const [gifs, setGifs] = useState([]);
   /* useState para manejar el loader de la lista de gifs. Por defecto en false */
   const [loading, setLoading] = useState(false);

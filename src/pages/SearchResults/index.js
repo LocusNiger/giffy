@@ -1,6 +1,6 @@
 import React from "react";
-import Gif from "./Gif";
-import { useGifs } from "../hooks/useGifs";
+import Gif from "../../components/Gif";
+import { useGifs } from "../../hooks/useGifs";
 
 /* Recibe como prop el obj params (wouter). En él se encuentra el keyword */
 export default function ListOfGifs({ params }) {
