@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";
 import { Route } from "wouter";
 import "tailwindcss/tailwind.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" component={Home} />
         <Route path="/search/:keyword" component={SearchResults} />
       </section>
+      <Footer />
     </div>
   );
 }

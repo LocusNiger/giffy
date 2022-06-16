@@ -6,7 +6,7 @@ import { useGifs } from "../../hooks/useGifs";
 export default function ListOfGifs({ params }) {
   /* Saco el keyword que recibímos mediante la ruta */
   const { keyword } = params;
-  /* Recupero loading y gifs del custom hook */
+  /* Recupero loading y gifs del custom hook, y le paso la keyword */
   const { loading, gifs } = useGifs({ keyword });
 
   /* Si está cargando la lista, muestra el Loader */
