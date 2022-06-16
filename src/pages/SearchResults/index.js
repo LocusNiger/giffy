@@ -16,7 +16,7 @@ export default function ListOfGifs({ params }) {
     /* sino retorna la lista de gifs */
     return (
       <>
-        <p className="text-xl mb-5 md:text-2xl lg:text-3xl">
+        <p className="text-xl my-5 md:text-2xl lg:text-3xl">
           These are the results for{" "}
           <span className="text-xl font-black uppercase md:text-2xl lg:text-3xl">'{keyword}'</span>
         </p>

@@ -13,6 +13,7 @@ function App() {
         <Logo />
         {/* route: cuando el path sea X, el componente a renderizar es Y */}
         <Route path="/" component={Home} />
+        <Route path="/search/:keyword" component={Home} />
         <Route path="/search/:keyword" component={SearchResults} />
       </section>
       <Footer />
