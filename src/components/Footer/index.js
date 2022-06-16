@@ -7,7 +7,7 @@ export default function Footer() {
       <p className="text-lg text-center">
         Built with <span className="text-white text-xl">♥</span> by{" "}
         <a href={link} target="_blank" rel="noopener noreferrer">
-          Iván Sánchez.{" "}
+          <span className="text-green-500">Iván Sánchez.</span>{" "}
         </a>
         All the credits here.
       </p>
