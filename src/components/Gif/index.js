@@ -4,11 +4,13 @@ import React from "react";
 export default function Gif({ title, url }) {
   return (
     <div className="w-5/6 flex flex-col justify-around justify-self-center items-center">
-      <img
-        src={url}
-        alt={title}
-        className="object-contain rounded-lg min-w-full hover:brightness-50 hover:transition-all hover:duration-200 hover:ease-in-out"
-      />
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <img
+          src={url}
+          alt={title}
+          className="object-contain rounded-lg min-w-full hover:brightness-50 hover:transition-all hover:duration-200 hover:ease-in-out"
+        />
+      </a>
       <h4 className="font-extralight text-center text-base mt-2">{title}</h4>
     </div>
   );
