@@ -8,7 +8,7 @@ export default function Gif({ title, url }) {
         <img
           src={url}
           alt={title}
-          className="object-contain rounded-lg min-w-full hover:brightness-50 hover:transition-all hover:duration-200 hover:ease-in-out"
+          className="object-contain min-w-full hover:brightness-50 hover:transition-all hover:duration-200 hover:ease-in-out"
         />
       </a>
       <h4 className="font-extralight text-center text-base mt-2">{title}</h4>

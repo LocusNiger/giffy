@@ -12,8 +12,7 @@ export function useGifs({ keyword } = { keyword: null }) {
       /* Antes de comenzar la búsqueda de gifs, el loader pasa a true */
       setLoading(true);
       /* Recuperamos la keyword del localStorage (si no mandan keyword) */
-      const keywordToUse = keyword || localStorage.getItem("lastKeyword");
-
+      const keywordToUse = keyword || localStorage.getItem("lastKeyword") || "random";
       /* useEffect llama a la fción. getGifs y le pasa el keyword a buscar */
       getGifs({ keyword: keywordToUse }).then((gifs) => {
         setGifs(gifs);
