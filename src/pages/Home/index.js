@@ -1,8 +1,6 @@
 import React from "react";
 import Search from "../../components/Search";
 import { useGifs } from "../../hooks/useGifs";
-import { Route } from "wouter";
-import SearchResults from "../SearchResults";
 
 export default function Home() {
   const { loading, gifs } = useGifs();
