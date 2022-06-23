@@ -5,6 +5,7 @@ import { useGifs } from "../../hooks/useGifs";
 export default function LastSearch({ params }) {
   const { keyword } = params;
   const { loading, gifs } = useGifs();
+
   return (
     <>
       <div>Last search: {keyword}</div>

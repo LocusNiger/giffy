@@ -4,7 +4,6 @@ import { useLocation } from "wouter";
 export default function Search() {
   const [keyword, setKeyword] = useState("Messi");
   const [path, pushLocation] = useLocation();
-  console.log(path);
   /* El input va actualizando el valor de keyword y luego el hook 'pushLocation' cambia la ruta */
   const handleKeyword = (e) => {
     setKeyword(e.target.value);

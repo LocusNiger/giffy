@@ -10,9 +10,7 @@ export default function SearchResults({ params }) {
   const { loading, gifs } = useGifs({ keyword });
 
   return (
-    <>
-      {loading ? <div className="loader min-h-screen min-w-fit"></div> : <ListOfGifs gifs={gifs} keyword={keyword} />}
-      /* Si está cargando la lista, muestra el Loader. Sino devuelve la lista de gifs*/
-    </>
+    <>{loading ? <div className="loader min-h-screen min-w-fit"></div> : <ListOfGifs gifs={gifs} />}</>
+    /* Si está cargando la lista, muestra el Loader. Sino devuelve la lista de gifs*/
   );
 }
